@@ -1,0 +1,58 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    border-radius: 2rem;
+    background-color: pink;
+    border: 3px solid palevioletred;
+    height: 400px;
+    width: 300px;
+    margin-right: 45rem;
+    margin-bottom: 10rem;
+}
+
+.form-container:hover {
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/love-wallpaper.jpg);
+    background-size: cover;
+}
+
+input {
+    border: none;
+    border-radius: 0.5rem;
+    width: 250px;
+    height: 25px;
+}
+
+#submit {
+    background-color: palevioletred;
+    color: white;
+    font-weight: 600;
+    border: none;
+    padding: 4px 15px 4px 15px;
+    border-radius: 2rem;
+}
+
+
+p {
+    color: palevioletred;
+    margin: 30 0 40 0;
+}
