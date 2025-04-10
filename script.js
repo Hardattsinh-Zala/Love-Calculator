@@ -1,23 +1,28 @@
 let submit = document.querySelector("#submit");
 let inputs = document.querySelectorAll("input");
 let msg = document.querySelector("p");
+let myName = document.querySelector("#yname");
+let partnerName = document.querySelector("#pname");
 
 function nameToNumber(name) {
     let sum = 0;
     for (let i = 0; i < name.length; i++) {
-        sum += name.charCodeAt(i);
+        sum += name.toLowerCase().charCodeAt(i);
     }
     return sum;
 }
 
 submit.addEventListener("click", () => {
-    let yname = document.querySelector("#yname");
-    let pname = document.querySelector("#pname");
-    let val = (nameToNumber(yname.value) + nameToNumber(pname.value)) % 100;
+    let val;
+    if(myName.value.toLowerCase().includes("hardatt") && partnerName.value.toLowerCase().includes("shakshi")) {
+        val = 100;
+    }else {
+        val = (nameToNumber(myName.value) + nameToNumber(partnerName.value)) % 100;
+    }
     for(let input of inputs) {
         if(input.value === "") {
             return;
         }
     }
-    msg.innerText = `${pname.value} has ${val}% chance of a good relationship with ${yname.value}`;
+    msg.innerText = `${partnerName.value} has ${val}% chance of a good relationship with ${myName.value}`;
 })
